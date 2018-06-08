@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/news_item_selector">
+
+        <ImageView
+            android:id="@+id/ivCoverImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/colorBackground"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCoverImg"
+            app:layout_constraintEnd_toStartOf="@+id/ivCoverImg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Queen gives Prince Harry the title Earl of Dumbarton" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/ivCoverImg"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            tools:text="Queen gives Prince Harry the title Earl of Dumbarton will take a sc" />
+
+        <TextView
+            android:id="@+id/tvSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/tvDescription"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:lines="1"
+            tools:text="BBC News" />
+
+        <TextView
+            android:id="@+id/tvPostedDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/tvSource"
+            app:layout_constraintTop_toTopOf="@+id/tvSource"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:lines="1"
+            tools:text="20 May 2018" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

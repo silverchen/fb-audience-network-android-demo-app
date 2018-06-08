@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/adContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivCoverImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/colorBackground" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:lines="1"
+            app:layout_constraintEnd_toStartOf="@+id/ivCoverImg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Queen gives Prince Harry the title Earl of Dumbarton" />
+
+        <TextView
+            android:id="@+id/tvSocialContext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:lines="1"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="BBC News" />
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/adMediaViewContainer"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/ivCoverImg"-->
+            <!--android:background="@color/colorBackground">-->
+
+            <!--<com.facebook.ads.MediaView-->
+                <!--android:id="@+id/adMediaView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="center" />-->
+        <!--</FrameLayout>-->
+
+        <com.facebook.ads.MediaView
+            android:id="@+id/adMediaView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCoverImg"/>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            app:layout_constraintEnd_toStartOf="@+id/btnCTA"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/adMediaView"
+            tools:text="Queen gives Prince Harry the title Earl of Dumbarton will take a sc" />
+
+        <TextView
+            android:id="@+id/lblSponsored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:lines="1"
+            app:layout_constraintStart_toStartOf="@+id/tvDescription"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            android:text="Sponsored" />
+
+        <LinearLayout
+            android:id="@+id/adChoicesContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/lblSponsored"
+            app:layout_constraintTop_toBottomOf="@+id/lblSponsored"
+            app:layout_constraintBottom_toTopOf="@+id/lblSponsored"/>
+
+        <Button
+            android:id="@+id/btnCTA"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"
+            android:layout_marginBottom="4dp"
+            android:paddingHorizontal="10dp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Install Now" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
