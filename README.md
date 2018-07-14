@@ -2,6 +2,8 @@ Android Demo App for Facebook Audience Network
 ==============================================
 News feed app to demonstrate native ad integration with [Facebook Audience Network](https://developers.facebook.com/docs/audience-network).
 
+<p align="center"><img width=40% src="https://user-images.githubusercontent.com/6683103/42722935-207d8fac-8787-11e8-8ee8-b3b0631cf274.png"></p>
+
 ## Getting started
 
 1. Follow this [guide](https://www.facebook.com/business/help/1195459597167215) to register an account for Audience Network and setup the ad placements.
